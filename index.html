@@ -50,7 +50,7 @@
                     <div class="avatar-box">
                         <img :src="contacts[index].avatar" alt="contact avatar">
                     </div>
-                    <div class="contact-box">
+                    <div class="contact-box" @click="changeActiveIndex(index)">
                         <span>{{ contacts[index].name }}</span>
                         <!-- <p>{{ contacts[index].messages[" goToLastMessage()"].message}}</p> -->
                     </div>   
@@ -61,9 +61,9 @@
                 <div class="flex">
                     <div class="flex" id="my-div">
                         <div class="avatar-box">
-                            <img src="img/avatar_io.jpg" alt="my avatar">
-                        </div>
-                        <span>Sofia</span>
+                            <img :src="contacts[activeIndex].avatar" alt="my avatar">
+                        </div> 
+                        <span>{{ contacts[activeIndex].name }}</span>
                     </div>
                     <div class="flex">
                         <i>ciao</i>

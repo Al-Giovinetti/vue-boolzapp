@@ -167,10 +167,14 @@ createApp({
                 }
             ],
 
-            //lastIndex : messages
+            activeIndex : 0,
+
         }
     },
     methods: {
+        changeActiveIndex(index){
+            this.activeIndex = index
+        }
         /*goToLastMessage(){
             for(let i = this.messages.length -1 ; i < 0 ; i--){
 
