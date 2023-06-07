@@ -1,0 +1,25 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+#bg-top{
+    background-color: #009688;
+    height: 20vh;
+}
+
+#bg-bottom{
+    background-color: #DBDBD2;
+    height: 80vh;
+}
+
+main{
+    width: 80vw;
+    height: 90vh;
+    position: absolute;
+    top: 50%; left:50%;
+    transform: translate(-50%,-50%);
+    background-color:white;
+
+}
