@@ -16,8 +16,10 @@
         <main class="flex">
             <section id="section-contacts">
                 <div class="flex">
-                    <div class="flex">
-                        <div>cerchio img</div>
+                    <div class="flex" id="my-div">
+                        <div class="avatar-box">
+                            <img src="img/avatar_io.jpg" alt="my avatar">
+                        </div>
                         <span>Sofia</span>
                     </div>
                     <div class="flex">
@@ -28,7 +30,9 @@
                 </div>
 
                 <div class="flex">
-                    <div>cerchio img</div>
+                    <div class="avatar-box">
+                        <i>dai è</i>
+                    </div>
                     <div>
                         <p>Ricevi notifiche di nuovi messaggi</p>
                         <a href="#" class="d-block">Attiva notifiche desktop</a>
@@ -43,10 +47,13 @@
                 </div>
 
                 <div class="contacts flex" v-for="(contact,index) in contacts">
-                    <div>
+                    <div class="avatar-box">
                         <img :src="contacts[index].avatar" alt="contact avatar">
                     </div>
-                    <div></div>
+                    <div class="contact-box">
+                        <span>{{ contacts[index].name }}</span>
+                        <p>{{ contacts[index].messages[" goToLastMessage()"].message}}</p>
+                    </div>
 
                     
                 </div>

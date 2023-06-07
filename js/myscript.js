@@ -165,10 +165,20 @@ createApp({
                         }
                     ],
                 }
-            ]
+            ],
+
+            lastIndex : messages
         }
     },
     methods: {
+        goToLastMessage(){
+            for(let i = this.messages.length -1 ; i < 0 ; i--){
+
+                if(this.messages.status == "sent"){
+                    this.lastIndex = i
+                }
+            }
+        }
     
     },
     //mounted

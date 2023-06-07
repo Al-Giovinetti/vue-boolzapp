@@ -49,6 +49,10 @@ main{
     border:1px solid black;
 }
 
+#my-div{
+    align-items: center;
+}
+
 #section-contacts>div:nth-child(2){
     background-color: #8EDAFC;
     border:1px solid black;
@@ -63,6 +67,21 @@ div.input-contacts i{
 
 div.input-contacts>input{
     width: 90%;
+}
+
+.avatar-box{
+    width: 50px;
+    height: 50px;
+}
+
+.avatar-box>img{
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+}
+
+.contact-box{
+    padding: 0.5rem;
 }
 
 
