@@ -39,14 +39,21 @@ main{
     width: calc(100% / 3);
 }
 
-#section-contacts>*{
+#section-chat{
+    width: calc(100% / 3 * 2);
+}
+
+#section-contacts>*,
+#section-chat>*{
     padding: 0.5rem;
 }
 
-#section-contacts>div:first-child{
+#section-contacts>div:first-child,
+#section-chat>div:first-child{
     justify-content: space-between;
     align-items: center;
-    border:1px solid black;
+    height: 60px;
+    background-color: #EAEAEA;
 }
 
 #my-div{
@@ -69,6 +76,10 @@ div.input-contacts>input{
     width: 90%;
 }
 
+div.contacts{
+    border-top: 1px solid grey;
+}
+
 .avatar-box{
     width: 50px;
     height: 50px;
@@ -83,5 +94,25 @@ div.input-contacts>input{
 .contact-box{
     padding: 0.5rem;
 }
+
+div.chat-zone{
+    height: calc(100% - 60px - 60px);
+    background-image: url("../img/mine.jpg");
+    background-size: contain; 
+    overflow-y: scroll;
+}
+
+div.input-chat{
+    height: 60px;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #F3EEEA;
+}
+
+.input-chat>input{
+    width: 70%;
+    padding: 0.5rem;
+}
+
 
 

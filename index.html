@@ -45,21 +45,44 @@
                     </div>
                     <input type="text" name="search-contact" id="search-contact" placeholder="cerca o inizia una nuova chat">
                 </div>
-
+                
                 <div class="contacts flex" v-for="(contact,index) in contacts">
                     <div class="avatar-box">
                         <img :src="contacts[index].avatar" alt="contact avatar">
                     </div>
                     <div class="contact-box">
                         <span>{{ contacts[index].name }}</span>
-                        <p>{{ contacts[index].messages[" goToLastMessage()"].message}}</p>
-                    </div>
-
-                    
+                        <!-- <p>{{ contacts[index].messages[" goToLastMessage()"].message}}</p> -->
+                    </div>   
                 </div>
 
             </section>
-            <section class="chat"></section>
+            <section id="section-chat">
+                <div class="flex">
+                    <div class="flex" id="my-div">
+                        <div class="avatar-box">
+                            <img src="img/avatar_io.jpg" alt="my avatar">
+                        </div>
+                        <span>Sofia</span>
+                    </div>
+                    <div class="flex">
+                        <i>ciao</i>
+                        <i>ciao</i>
+                        <i>ciao</i>
+                    </div>
+                </div>
+
+                <div class="chat-zone">
+
+                </div>
+
+                <div class="input-chat flex">
+                    <i>ciao</i>
+                    <input type="text" name="write-text" id="write-text" placeholder="scrivi un messaggio">
+                    <i>ciao</i>
+                </div>
+
+            </section>
 
         </main>
         
