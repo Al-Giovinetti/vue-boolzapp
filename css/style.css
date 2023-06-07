@@ -4,6 +4,18 @@
     box-sizing: border-box;
 }
 
+.flex{
+    display: flex;
+}
+
+.d-block{
+    display: block;
+}
+
+body{
+    font-size: 0.8rem;
+}
+
 #bg-top{
     background-color: #009688;
     height: 20vh;
@@ -16,10 +28,41 @@
 
 main{
     width: 80vw;
-    height: 90vh;
+    height: 95vh;
     position: absolute;
     top: 50%; left:50%;
     transform: translate(-50%,-50%);
     background-color:white;
-
 }
+
+#section-contacts{
+    width: calc(100% / 3);
+}
+
+#section-contacts>*{
+    padding: 0.5rem;
+}
+
+#section-contacts>div:first-child{
+    justify-content: space-between;
+    align-items: center;
+    border:1px solid black;
+}
+
+#section-contacts>div:nth-child(2){
+    background-color: #8EDAFC;
+    border:1px solid black;
+}
+div.input-contacts>div{
+    width: 10%;
+}
+
+div.input-contacts i{
+    margin: auto;
+}
+
+div.input-contacts>input{
+    width: 90%;
+}
+
+
