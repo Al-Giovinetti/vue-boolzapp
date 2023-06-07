@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Boolzapp</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -20,28 +21,28 @@
                         <div class="avatar-box">
                             <img src="img/avatar_io.jpg" alt="my avatar">
                         </div>
-                        <span>Sofia</span>
+                        <span class="bold">Sofia</span>
                     </div>
                     <div class="flex">
-                        <i>ciao</i>
-                        <i>ciao</i>
-                        <i>ciao</i>
+                        <i class="fa-solid fa-circle-notch"></i>
+                        <i class="fa-solid fa-message"></i>
+                        <i class="fa-solid fa-ellipsis-vertical"></i>
                     </div>
                 </div>
 
                 <div class="flex">
-                    <div class="avatar-box">
-                        <i>dai è</i>
+                    <div class="avatar-box flex">
+                        <i class="fa-solid fa-bell-slash"></i>
                     </div>
                     <div>
-                        <p>Ricevi notifiche di nuovi messaggi</p>
+                        <p class="bold">Ricevi notifiche di nuovi messaggi</p>
                         <a href="#" class="d-block">Attiva notifiche desktop</a>
                     </div>
                 </div>
 
                 <div class="flex input-contacts">
                     <div class="flex">
-                        <i>lente</i>
+                        <i class="fa-solid fa-magnifying-glass"></i>
                     </div>
                     <input type="text" name="search-contact" id="search-contact" placeholder="cerca o inizia una nuova chat">
                 </div>
@@ -51,35 +52,40 @@
                         <img :src="contacts[index].avatar" alt="contact avatar">
                     </div>
                     <div class="contact-box" @click="changeActiveIndex(index)">
-                        <span>{{ contacts[index].name }}</span>
-                        <!-- <p>{{ contacts[index].messages[" goToLastMessage()"].message}}</p> -->
+                        <span class="bold">{{ contacts[index].name }}</span>
+                        <p></p>
                     </div>   
                 </div>
-
             </section>
+
             <section id="section-chat">
                 <div class="flex">
                     <div class="flex" id="my-div">
                         <div class="avatar-box">
-                            <img :src="contacts[activeIndex].avatar" alt="my avatar">
+                            <img :src="contacts[activeIndex].avatar" alt="contact avatar">
                         </div> 
-                        <span>{{ contacts[activeIndex].name }}</span>
+                        <span class="bold">{{ contacts[activeIndex].name }}</span>
                     </div>
                     <div class="flex">
-                        <i>ciao</i>
-                        <i>ciao</i>
-                        <i>ciao</i>
+                        <i class="fa-solid fa-bell-slash"></i>
+                        <i class="fa-solid fa-paperclip"></i>
+                        <i class="fa-solid fa-ellipsis-vertical"></i>
                     </div>
                 </div>
 
-                <div class="chat-zone">
+                <div id="chat-zone">
+                    <ul>
+                        <li v-for="(contact,index) in contacts">
+                            {{contacts[activeIndex].messages[0].message}}
+                        </li>
+                    </ul>
 
                 </div>
 
                 <div class="input-chat flex">
-                    <i>ciao</i>
+                    <i class="fa-regular fa-face-smile"></i>
                     <input type="text" name="write-text" id="write-text" placeholder="scrivi un messaggio">
-                    <i>ciao</i>
+                    <i class="fa-solid fa-microphone"></i>
                 </div>
 
             </section>
