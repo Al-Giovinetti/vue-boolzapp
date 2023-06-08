@@ -169,6 +169,8 @@ createApp({
 
             activeIndex : 0,
 
+            messages:[]
+
         }
     },
     methods: {

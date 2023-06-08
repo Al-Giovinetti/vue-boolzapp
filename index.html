@@ -73,13 +73,11 @@
                     </div>
                 </div>
 
-                <div id="chat-zone">
-                    <ul>
-                        <li v-for="(contact,index) in contacts">
-                            {{contacts[activeIndex].messages[0].message}}
-                        </li>
-                    </ul>
-
+                <div id="chat-zone" class="clear-fix">
+                    <div  v-for="(contact,index) in contacts" v-for="(key,index) in messages" >             
+                                {{ contacts[activeIndex].messages[index]}}
+                                aaaaaaa
+                    </div>
                 </div>
 
                 <div class="input-chat flex">
