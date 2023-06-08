@@ -74,9 +74,8 @@
                 </div>
 
                 <div id="chat-zone" class="clear-fix">
-                    <div  v-for="(contact,index) in contacts" v-for="(key,index) in messages" >             
-                                {{ contacts[activeIndex].messages[index]}}
-                                aaaaaaa
+                    <div v-for="(element,index) in contacts" >
+                            {{contacts[activeIndex].messages[index].message}}
                     </div>
                 </div>
 
