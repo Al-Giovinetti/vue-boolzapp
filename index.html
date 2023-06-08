@@ -75,15 +75,14 @@
 
                 <div id="chat-zone" class="clear-fix">
                     <div v-for="(element,index) in contacts[activeIndex].messages"
-                    :class="contacts[activeIndex].messages[index].status == 'sent' ? 'mex-sent' : 'mex-received'"  
-                    >
+                        :class="contacts[activeIndex].messages[index].status == 'sent' ? 'mex-sent' : 'mex-received'" >
                             {{contacts[activeIndex].messages[index].message}}
                     </div>
                 </div>
 
                 <div class="input-chat flex">
                     <i class="fa-regular fa-face-smile"></i>
-                    <input type="text" name="write-text" id="write-text" placeholder="scrivi un messaggio">
+                    <input type="text" name="write-text" id="write-text" placeholder="scrivi un messaggio" v-model="newMessage" @keyup.enter="sentNewMessage(newMessage,activeIndex)">
                     <i class="fa-solid fa-microphone"></i>
                 </div>
 

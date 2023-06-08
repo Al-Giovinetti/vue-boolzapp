@@ -178,9 +178,16 @@ createApp({
             this.activeIndex = index
         },
 
-    }
-    //mounted
-
+        sentNewMessage(newMessage,index){
+            const newElement = {
+                date: new Date(),
+                message: newMessage,
+                status: 'sent'
+            }
+            this.contacts[index].messages.push(newElement)
+            this.newMessage=" "
+            }
+        }
 }).mount("#app");
 
 
