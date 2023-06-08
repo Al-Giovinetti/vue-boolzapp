@@ -75,7 +75,7 @@
 
                 <div id="chat-zone" class="clear-fix">
                     <div v-for="(element,index) in contacts[activeIndex].messages"
-                    v-if="" 
+                    :class="contacts[activeIndex].messages[index].status == 'sent' ? 'mex-sent' : 'mex-received'"  
                     >
                             {{contacts[activeIndex].messages[index].message}}
                     </div>

@@ -137,7 +137,7 @@ div.contacts{
     background-image: url("../img/mine.jpg");
     background-size: contain; 
     overflow-y: scroll;
-    padding: 3rem 3rem 0 3rem;
+    padding: 2rem 2rem 0 2rem;
 }
 
 #chat-zone div{
@@ -145,7 +145,6 @@ div.contacts{
     margin-top: 0.5rem;
     border: 1px solid black;
     border-radius: 10px;
-    float: left;
     clear: both;
 }
 
@@ -158,6 +157,16 @@ div.input-chat{
 
 .input-chat>input{
     width: 70%;
+}
+
+.mex-sent{
+    float: right;
+    background-color: #D5F9BA;
+}
+
+.mex-received{
+    float: left;
+    background-color: white;
 }
 
 
