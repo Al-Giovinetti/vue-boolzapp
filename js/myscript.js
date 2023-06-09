@@ -170,6 +170,8 @@ createApp({
             activeIndex : 0,
 
             newMessage :" ",
+
+            searchContact:" "
         }
     },
     methods: {
@@ -195,6 +197,16 @@ createApp({
                 status: 'received'
             }
         this.contacts[this.activeIndex].messages.push(reply)
+        },
+
+        searchContacts(searchContact){
+            for(let i = 0; i < searchContact.length; i++){
+                if(searchContact.charAt(i) == (this.contacts[this.activeIndex].name).charAt(i)){
+                    return true
+                }else{
+                    return false
+                }
+            }
         }
 
         },
