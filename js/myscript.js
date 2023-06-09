@@ -171,7 +171,7 @@ createApp({
 
             newMessage :" ",
 
-            searchContact:" "
+            searchContact:""
         }
     },
     methods: {
@@ -199,13 +199,16 @@ createApp({
         this.contacts[this.activeIndex].messages.push(reply)
         },
 
-        searchContacts(searchContact){
-            for(let i = 0; i < searchContact.length; i++){
-                if(searchContact.charAt(i) == (this.contacts[this.activeIndex].name).charAt(i)){
-                    return true
-                }else{
-                    return false
-                }
+        searchContacts(searchContactx,index){
+            if(searchContactx == ""){
+                return true
+            }
+
+            let y = searchContactx.length
+            if(searchContactx.substring(0) == this.contacts[index].name.substring(0,y)){
+                return true
+            }else{
+                return false 
             }
         }
 
