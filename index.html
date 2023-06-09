@@ -44,17 +44,19 @@
                     <div class="flex">
                         <i class="fa-solid fa-magnifying-glass"></i>
                     </div>
-                    <input type="text" name="search-contact" id="search-contact" placeholder="cerca o inizia una nuova chat">
+                    <input type="text" placeholder="cerca o inizia una nuova chat" v-model="search-contact">
                 </div>
                 
                 <div class="contacts flex" v-for="(contact,index) in contacts">
-                    <div class="avatar-box">
-                        <img :src="contacts[index].avatar" alt="contact avatar">
-                    </div>
-                    <div class="contact-box" @click="changeActiveIndex(index)">
-                        <span class="bold">{{ contacts[index].name }}</span>
-                        <p></p>
-                    </div>   
+                    <span v-if="contacts[index].name == search-contact">
+                        <div class="avatar-box">
+                            <img :src="contacts[index].avatar" alt="contact avatar">
+                        </div>
+                        <div class="contact-box" @click="changeActiveIndex(index)">
+                            <span class="bold">{{ contacts[index].name }}</span>
+                            <p></p>
+                        </div>
+                    </span>   
                 </div>
             </section>
 
