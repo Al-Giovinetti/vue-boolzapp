@@ -169,8 +169,7 @@ createApp({
 
             activeIndex : 0,
 
-            messages:[]
-
+            newMessage :" ",
         }
     },
     methods: {
@@ -186,8 +185,20 @@ createApp({
             }
             this.contacts[index].messages.push(newElement)
             this.newMessage=" "
+            setTimeout(this.createReply,1000)
+            },
+
+        createReply(){
+            const reply = {
+                date: new Date() + 1000,
+                message: "butta il 3 di briscola",
+                status: 'received'
             }
+        this.contacts[this.activeIndex].messages.push(reply)
         }
+
+        },
+            
 }).mount("#app");
 
 
