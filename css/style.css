@@ -190,9 +190,11 @@ div.input-chat{
 
 .info-message{
     background-color: white;
-    border: 0;
+    border: 1px solid;
     margin-top: 1rem;
     padding: 0.3rem;
+    width: 120px;
+    clear: both;
 }
 
 

@@ -207,7 +207,8 @@ createApp({
             }
 
             let y = searchContactx.length
-            if(searchContactx.substring(0) == this.contacts[index].name.substring(0,y)){
+            let nameLowerCase = this.contacts[index].name.toLowerCase()
+            if(searchContactx.substring(0) == nameLowerCase.substring(0,y)){
                 return true
             }else{
                 return false 
@@ -220,6 +221,10 @@ createApp({
             }else{
                 this.click = false
             }
+        },
+
+        delateMex(index){
+            this.contacts[this.activeIndex].messages[index].message.splice(index,1)
         }
 
         },
