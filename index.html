@@ -78,9 +78,14 @@
                 </div>
 
                 <div id="chat-zone" class="clear-fix">
-                    <div v-for="(element,index) in contacts[activeIndex].messages"
-                        :class="contacts[activeIndex].messages[index].status == 'sent' ? 'mex-sent' : 'mex-received'" >
+                    <div v-for="(element,index) in contacts[activeIndex].messages" :class="contacts[activeIndex].messages[index].status == 'sent' ? 'mex-sent' : 'mex-received'" >
+                        <div class="text-message"  @click = toggle()>
                             {{contacts[activeIndex].messages[index].message}}
+                            <span class="info-message" :class =" click == true ? 'd-block' : ' d-none'">
+                                <p>Message info</p>
+                                <p>Cancella messaggio</p>
+                            </span>
+                        </div>                    
                     </div>
                 </div>
 

@@ -171,7 +171,9 @@ createApp({
 
             newMessage :" ",
 
-            searchContact:""
+            searchContact:"",
+
+            click: false
         }
     },
     methods: {
@@ -209,6 +211,14 @@ createApp({
                 return true
             }else{
                 return false 
+            }
+        },
+
+        toggle(){
+            if(this.click == false){
+                this.click = true
+            }else{
+                this.click = false
             }
         }
 
